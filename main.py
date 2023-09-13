@@ -16,6 +16,11 @@ cronometro = pygame.time.Clock()
 fps = 60
 # variaveis do jogo e imagens
 
+rainha_branca=pygame.image.load('assets/imagens/W_Queen.png')
+rainha_branca=pygame.image.scale(rainha_branca, (80,80))
+torre_branca=pygame.image.scale(pygame.image.load('assets/imagens/W_Rook.png') (80, 80))
+
+
 pecas_brancas = ['torre', 'cavalo', 'bispo', 'rei', 'rainha', 'bispo', 'cavalo', 'torre',
                  'peao', 'peao', 'peao', 'peao', 'peao', 'peao', 'peao', 'peao']
 
@@ -32,9 +37,11 @@ pecas_brancas_capturadas = []
 
 pecas_pretas_capturadas =[]
 
-turnos=[]
+turnos_fases=0
 
+peca_selecionada=60
 
+movimentos_validos=[]
 
 # loop principal do jogo
 run = True
